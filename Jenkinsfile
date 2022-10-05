@@ -5,14 +5,14 @@ pipeline {
     disableConcurrentBuilds()
   }
   stages {
-    stage('Hello') {
+    stage('Build') {
       steps {
-        echo "hello"
+        echo "holita hola"
       }
     }
     stage('cat README') {
       when {
-        branch "fix-*"
+        branch "pruebas" // solo las de pruebas imprimiran el readme
       }
       steps {
         sh '''
